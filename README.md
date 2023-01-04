@@ -1,6 +1,7 @@
 - 👋 Hi, I’m @mr-farru-20
 - 👀 I’m interested in ...Java and Web Development
 - 🌱 I’m currently learning ...Python, Java and Web Development
+- 🤖 I'm also interested in robotics and analytics
 - 💞️ I’m looking to collaborate
 - 📫 How to reach me ...itsferhan.ansari@gmail.com or 9955686486
 

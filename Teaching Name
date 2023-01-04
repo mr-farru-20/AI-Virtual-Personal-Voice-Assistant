@@ -1,0 +1,12 @@
+def username():
+    speak("What should i call you sir")
+    uname = takeCommand()
+    speak("Welcome Mister")
+    speak(uname)
+    columns = shutil.get_terminal_size().columns
+    
+    print("#####################".center(columns))
+    print("Welcome Mr.", uname.center(columns))
+    print("#####################".center(columns))
+    
+    speak("How can i Help you, Sir")

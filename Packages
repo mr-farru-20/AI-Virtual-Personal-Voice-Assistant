@@ -1,26 +1,52 @@
 import subprocess
+#a module used to run new codes and applications by creating new processes
 import wolframalpha
+#lets Python programs directly integrate Wolfram Language capabilities
 import pyttsx3
+#a text-to-speech conversion library in Python.
 import tkinter
+#the de facto way in Python to create Graphical User interfaces (GUIs)
 import json
+#a standardized format commonly used to transfer data as text that can be sent over a network.
 import random
+#defines a series of functions for generating or manipulating random integers.
 import operator
+#one of the inbuilt modules in Python, and it provides us with a lot of functions such as add(x, y), floordiv(x, y) etc.
 import speech_recognition as sr
+#a machine's ability to listen to spoken words and identify them.
 import datetime
+#to work with the date as well as time.
 import wikipedia
+#a Python library that makes it easy to access and parse data from Wikipedia.
 import webbrowser
+#provides a high-level interface to allow displaying web-based documents to users.
 import os
+#allows us to run a command in the Python script.
 import winshell
+# a light wrapper around the Windows shell functionality.
 import pyjokes
+#One line jokes for programmers (jokes as a service).
 import feedparser
+#a Python module for downloading and parsing syndicated feeds.
 import smtplib
+#3defines an SMTP client session object that can be used to send mail to any internet machine with an SMTP or ESMTP listener daemon.
 import ctypes
+# provides C compatible data types, and allows calling functions in DLLs or shared libraries.
 import time
+#allows to work with time in Python.
 import requests
+#The requests module allows you to send HTTP requests using Python.
 import shutil
+#used to copy the content of source file to destination file or directory.
 from twilio.rest import Client
+#a program that makes use of an implementation.
 from clint.textui import progress
+#indicates whether the code is working or stuck in a loop due to an error.
 from ecapture import ecapture as ec
+#Capture photos Number of Arguments.
 from bs4 import BeautifulSoup
+#Beautiful Soup is a library that makes it easy to scrape information from web pages.
 import win32com.client as wincl
+#contains a number of modules to provide access to automation objects.
 from urllib.request import urlopen
+#import urlopen

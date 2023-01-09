@@ -1,6 +1,9 @@
 def username():
-    speak("What should i call you sir")
+#self defined function
+    speak("How should I address you, sir?")
+#Any thing written under the speak function will be spoken as it is.
     uname = takeCommand()
+#It will be used for taking commands(your name) and act according to it.
     speak("Welcome Mister")
     speak(uname)
     columns = shutil.get_terminal_size().columns
@@ -8,5 +11,5 @@ def username():
     print("#####################".center(columns))
     print("Welcome Mr.", uname.center(columns))
     print("#####################".center(columns))
-    
-    speak("How can i Help you, Sir")
+#It is the way to represent, how it will call you(by your name).
+    speak("How may I assist you, Sir?")

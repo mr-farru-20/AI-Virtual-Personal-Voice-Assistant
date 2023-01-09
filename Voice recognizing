@@ -1,7 +1,8 @@
 def takeCommand():
+#self defined function
     
     r = sr.Recognizer()
-    
+#if no microphone found it will throw u an error.
     with sr.Microphone() as source:
         
         print("Listening...")

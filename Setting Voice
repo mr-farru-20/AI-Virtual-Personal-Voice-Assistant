@@ -1,3 +1,5 @@
 engine = pyttsx3.init('sapi5')
+#API for Microsoft Speech integrated with the help of pyttsx3 module.
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)
+#there are 2 kind of voices in sapi5 0[male] and 1[female].

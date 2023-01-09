@@ -1,7 +1,11 @@
 def sendEmail(to, content):
+#self defined function
     server = smtplib.SMTP('smtp.gmail.com', 587)
+#In order to submit emails securely for delivery, modern email servers employ port 587.
     server.ehlo()
+#When connecting to another email server to begin the process of sending an email, an email server sends the Extended HELO (EHLO) Extended Simple Mail Transfer Protocol (ESMTP) command to identify itself.
     server.starttls()
+#To inform the email server that the email client wants to utilise a secure connection using TLS or SSLmail, use the StartTLS extension of the SMTP protocol.
     
     # Enable low security in gmail
     server.login('your email id', 'your email password')
@@ -33,7 +37,7 @@ if __name__ == '__main__':
             speak("According to Wikipedia")
             print(results)
             speak(results)
-
+#open youtube
         elif 'open youtube' in query:
             speak("Here you go to Youtube\n")
             webbrowser.open("youtube.com")
@@ -68,131 +72,34 @@ if __name__ == '__main__':
         elif'Who is Roll no 10' in query:
             speak("Suja")
 
-        elif'Who is Roll no 11' in query:
-            speak("Suja")
-
-        elif'Who is Roll no 12' in query:
-            speak("Aneeza")
-
-        elif'Who is Roll no 13' in query:
-            speak("Suja")
-
-        elif'Who is Roll no 14' in query:
-            speak("Suja")
-
-        elif'Who is Roll no 15' in query:
-            speak("Suja")
-
-        elif'Who is Roll no 16' in query:
-            speak("Suja")
-            
-        elif'Who is Roll no 17' in query:
-            speak("Suja")
-
-        elif'Who is Roll no 18' in query:
-            speak("Suja")
-
-        elif'Who is Roll no 19' in query:
-            speak("Suja")
-
-        elif'Who is Roll no 20' in query:
-            speak("Suja")
-
-        elif'Who is Roll no 21' in query:
-            speak("Suja")
-
-        elif'Who is Roll no 22' in query:
-            speak("Thoushief Ansari")
-
-        elif'Who is Roll no 23' in query:
-            speak("Ibrahim Mirza /n Defaulter 6 lines /n Haven't called the parent's yet")
-
-        elif'Who is Roll no 24' in query:
-            speak("Tushar")
-
-        elif'Who is Roll no 25' in query:
-            speak("Zaid Dosani")
-
-        elif'Who is Roll no 26' in query:
-            speak("Faizan Alam")
-            
-        elif'Who is Roll no 27' in query:
-            speak("Giridhar Balakrishnan")
-
-        elif'Who is Roll no 28' in query:
-            speak("Abdul Wase")
-
-        elif'Who is Roll no 29' in query:
-            speak("Aman Jiwani")
-
-        elif'Who is Roll no 30' in query:
-            speak("Saad Malik")
-
-        elif'Who is Roll no 31' in query:
-            speak("Amaan Malpekar")
-
-        elif'Who is Roll no 32' in query:
-            speak("Zoef Markande")
-
-        elif'Who is Roll no 33' in query:
-            speak("Shubham Maurya")
-
-        elif'Who is Roll no 34' in query:
-            speak("Abhay Pandey")
-
-        elif'Who is Roll no 35' in query:
-            speak("Asad Qureshi")
-
-        elif'Who is Roll no 36' in query:
-            speak("Farhan Sarang")
-            
-        elif'Who is Roll no 37' in query:
-            speak("Adnan Khan")
-
-        elif'Who is Roll no 38' in query:
-            speak("Auwais Khan")
-
-        elif'Who is Roll no 39' in query:
-            speak("Ferhan Ansari")
-
-        elif'Who is Roll no 40' in query:
-            speak("Rupesh Sharma /n KT BOY")
-
-        elif'Who is Roll no 41' in query:
-            speak("Arshad Mulla ")
-
         elif'Who are your designenrs' in query:
-            speak("Ferhan,Zoef,Asad,Zaid,Farhan")
-
-
+            speak("Ferhan Ansari..Zoef Markande..Asad Qqureshi..Zaid Dosani..Arshad Mulla")
+#open google
         elif 'open google' in query:
             speak("Here you go to Google\n")
             webbrowser.open("google.com")
-
-        elif 'open stackoverflow' in query:
-            speak("Here you go to Stack Over flow.Happy coding")
-            webbrowser.open("stackoverflow.com")
-
+#Play music
         elif 'play music' in query or "play song" in query:
             speak("Here you go with music")
             # music_dir = "G:\\Song"
+            #Location of the file where the music file has been saved.
             music_dir = "C:\\Users\\Ferhan Ansari\\OneDrive\\Desktop\\OneDrive\\Pictures\\Extra Activities\\Naat"
             songs = os.listdir(music_dir)
             print(songs)
             random = os.startfile(os.path.join(music_dir, songs[1]))
-
+#informs about the time
         elif 'the time' in query:
             strTime = datetime.datetime.now().strftime("% H:% M:% S")
             speak(f"Sir, the time is {strTime}")
-
+#informs about the date 
         elif 'the date' in query:
             strTime = datetime.datetime.now().strftime("% D:% M:% Y")
             speak(f"Sir, the time is {strTime}")
 
-
-        elif 'email to Zoef' in query:
+#For mailing
+        elif 'email to Zoef Markande' in query:
             try:
-                speak("What should I say?")
+                speak("What ought I to say?")
                 content = takeCommand()
                 to = "Receiver email address"
                 sendEmail(to, content)
@@ -203,47 +110,47 @@ if __name__ == '__main__':
 
         elif 'send a mail' in query:
             try:
-                speak("What should I say?")
+                speak("What ought I to say?")
                 content = takeCommand()
-                speak("whome should i send")
+                speak("Whom do I email this to?")
                 to = input()
                 sendEmail(to, content)
-                speak("Email has been sent !")
+                speak("Email has been delivered!")
             except Exception as e:
                 print(e)
-                speak("I am not able to send this email")
-
+                speak("I can't send this email, sorry.")
+#Normal Converstaion
         elif 'how are you' in query:
-            speak("I am fine, Thank you")
-            speak("How are you, Sir")
-
+            speak("I'm good, thanks for asking.")
+            speak("What's up, sir?")
+#Greetings
         elif 'fine' in query or "good" in query:
-            speak("It's good to know that your fine")
-
+            speak("Being in good health is encouraging.")
+#Changing of name using replace function
         elif "change my name to" in query:
-            query = query.replace("change my name to", "")
+            query = query.replace("I'll be calling myself", "")
             assname = query
 
         elif "change name" in query:
-            speak("What would you like to call me, Sir ")
+            speak("How may I be addressed, Sir? ")
             assname = takeCommand()
-            speak("Thanks for naming me")
-
-        elif "what's your name" in query or "What is your name" in query:
-            speak("My friends call me")
+            speak("I appreciate being given that name.")
+#Recongnition
+        elif "who are you, please" in query or "who are you, please?" in query:
+            speak("My pals call me")
             speak(assname)
-            print("My friends call me", assname)
-
+            print("My pals call me", assname)
+#exiting the conversation
         elif 'exit' in query:
-            speak("Thanks for giving me your time")
+            speak("Thanks for spending time with me.")
             exit()
-
-        elif "who made you" in query or "who created you" in query:
-            speak("I have been created by Ferhan.")
-            
+#personal enquiry
+        elif "who produced you" in query or "one who formed you" in query:
+            speak("I have been created by Ferhan Ansari..Asad Qureshi..Zoef Markande..Zaid Dosani..Arshad Mulla")
+#jokes     
         elif 'joke' in query:
             speak(pyjokes.get_joke())
-            
+#telling Jokes    
         elif "calculate" in query:
             
             app_id = "Wolframalpha api id"
@@ -252,39 +159,34 @@ if __name__ == '__main__':
             query = query.split()[indx + 1:]
             res = client.query(' '.join(query))
             answer = next(res.results).text
-            print("The answer is " + answer)
-            speak("The answer is " + answer)
-
+            print(The solution is " + answer)
+            speak("The solution is" + answer)
+#Browsing
         elif 'search' in query or 'play' in query:
             
             query = query.replace("search", "")
             query = query.replace("play", "")		
             webbrowser.open(query)
 
-        elif "who i am" in query:
-            speak("If you talk then definitely your human.")
+        elif "whom I am" in query:
+            speak("You are unquestionably a person if you can converse.")
 
-        elif "why you came to world" in query:
-            speak("Thanks to Ferhan. further It's a secret")
-
-        elif 'power point presentation' in query:
-            speak("opening Power Point presentation")
-            power = r"C:\Users\\Ferhan Ansari\\OneDrive\\Desktop\\OneDrive\\Pictures\\Extra Activities\\Creativity\\Artificial Intelligence PPT.pptx"
-            os.startfile(power)
+        elif "the reason you entered the world" in query:
+            speak("Thanks to Ferhan Ansari..Asad Qureshi..Zoef Markande..Zaid Dosani..Arshad Mulla..further It's a secret")
 
         elif 'is love' in query:
-            speak("It is 7th sense that destroy all other senses")
+            speak("It is the seventh sense is what renders the others useless.")
 
-        elif "who are you" in query:
-            speak("I am your virtual assistant created by Gaurav")
+        elif "whom are you?" in query:
+            speak("I'm your virtual helper. Designed by Ferhan Ansari..Zoef Markande..Zaid Dosani..Asad Qureshi..Arshad Mulla")
 
         elif 'reason for you' in query:
             speak("I was created as a Minor project by Mister Gaurav ")
-
-        elif 'change background' in query:
+#Changing in the background of the desktop on which the code would run.
+        elif 'modify the background' in query:
             ctypes.windll.user32.SystemParametersInfoW(20,0,"Location of wallpaper",0)
-            speak("Background changed successfully")
-
+            speak("Background successfully updated.")
+#News paste the link of the news channel under json obj.a common text-based format based on JavaScript object syntax for displaying structured data.
         elif 'news' in query:
             
             try:
@@ -304,12 +206,11 @@ if __name__ == '__main__':
             except Exception as e:
                 
                 print(str(e))
-
-        
+#Lock window of the desktop on which the code is running.
         elif 'lock window' in query:
                 speak("locking the device")
                 ctypes.windll.user32.LockWorkStation()
-
+|#
         elif 'shutdown system' in query:
                 speak("Hold On a Sec ! Your system is on its way to shut down")
                 subprocess.call('shutdown / p /f')
@@ -323,29 +224,29 @@ if __name__ == '__main__':
             a = int(takeCommand())
             time.sleep(a)
             print(a)
-
+# will mark the location where the device would be
         elif "where is" in query:
             query = query.replace("where is", "")
             location = query
             speak("User asked to Locate")
             speak(location)
             webbrowser.open("https://www.google.nl / maps / place/" + location + "")
-
+#click pictures as per the command
         elif "camera" in query or "take a photo" in query:
             ec.capture(0, "Alexander Camera ", "img.jpg")
-
+#restarts the device on which the code is compiled.
         elif "restart" in query:
             subprocess.call(["shutdown", "/r"])
-            
+#hibernates the device on which the code is compiled.     
         elif "hibernate" in query or "sleep" in query:
             speak("Hibernating")
             subprocess.call("shutdown / h")
-
+#Logs off the device on which the code is compiled.
         elif "log off" in query or "sign out" in query:
             speak("Make sure all the application are closed before sign-out")
             time.sleep(5)
             subprocess.call(["shutdown", "/l"])
-
+#writes a note in a notepad and saves it with the given name under file variables on the device on the code is compiled.
         elif "write a note" in query:
             speak("What should i write, sir")
             note = takeCommand()
@@ -367,7 +268,7 @@ if __name__ == '__main__':
             speak(file.read(6))
 
         elif "update assistant" in query:
-            speak("After downloading file please replace this file with the downloaded one")
+            speak(Please replace this file with the one you just received after downloading.")
             url = '# url after uploading file'
             r = requests.get(url, stream = True)
             
@@ -380,13 +281,13 @@ if __name__ == '__main__':
                     if ch:
                         Pypdf.write(ch)
                     
-        # NPPR9-FWDCX-D2C8J-H872K-2YT43
+        # will wake up listening the command.
         elif "Alexander" in query:
             
             wishMe()
             speak("Alexander 1 point o in your service Mister")
             speak(assname)
-
+#informs more about weather
         elif "weather" in query:
             
             # Google Open weather website
